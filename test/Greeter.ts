@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
 
-import { Greeter } from "../../../typechain";
+import { Greeter } from "../typechain";
 
 describe("Greeter", function () {
   let greeter: Greeter;
