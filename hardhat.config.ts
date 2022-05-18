@@ -17,7 +17,7 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.4",
+    version: "0.8.9",
     settings: {
       optimizer: {
         enabled: true,
@@ -49,27 +49,27 @@ const config: HardhatUserConfig = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    polygon_matic: {
+    polygon: {
       chainId: 137,
-      url: process.env.POLYGON_MATIC_URL || "",
+      url: process.env.POLYGON_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    polygon_mumbai: {
+    polygonMumbai: {
       chainId: 80001,
       url: process.env.POLYGON_MUMBAI_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    arbitrum_one: {
+    arbitrumOne: {
       chainId: 42161,
       url: process.env.ARBITRUM_ONE_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    arbitrum_rinkeby: {
+    arbitrumTestnet: {
       chainId: 421611,
-      url: process.env.ARBITRUM_RINKEBY_URL || "",
+      url: process.env.ARBITRUM_TESTNET_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
@@ -78,6 +78,7 @@ const config: HardhatUserConfig = {
     apiKey: {
       mainnet: process.env.MAINNET_ETHERSCAN_API_KEY,
       rinkeby: process.env.RINKEBY_ETHERSCAN_API_KEY,
+      ropsten: process.env.ROPSTEN_ETHERSCAN_API_KEY,
       arbitrumOne: process.env.ARBITRUM_ONE_ETHERSCAN_API_KEY,
       arbitrumTestnet: process.env.ARBITRUM_TESTNET_ETHERSCAN_API_KEY,
       polygon: process.env.POLYGON_ETHERSCAN_API_KEY,
